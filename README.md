@@ -21,6 +21,7 @@ you can check the version by
 `git clone https://github.com/ArunDharani/Do-Day.git`
 
 ## Step - 2. Please Install npm packages by running
+Run this command to enter into the folder `cd Do-Day`
 Run `npm install` to install all the necessary packages
 
 ## Step - 3. Create a .env file inside the Do-Day Folder
