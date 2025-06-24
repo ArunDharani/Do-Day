@@ -18,7 +18,7 @@ you can check the version by
 # How to run this project 
 
 ## Step - 1. Clone this Repository
-`https://github.com/ArunDharani/Do-Day.git`
+`git clone https://github.com/ArunDharani/Do-Day.git`
 
 ## Step - 2. Please Install npm packages by running
 Run `npm install` to install all the necessary packages
