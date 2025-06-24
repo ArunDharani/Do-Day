@@ -30,6 +30,7 @@ Run `npm install` to install all the necessary packages
 ## Step - 4. Add the following inside the env file
 First run `nano .env`
 
+Now you can change the credentials as per your data
 ```
 PORT= "your wish"
 DB_HOST= "you can also change this"
