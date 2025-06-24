@@ -13,7 +13,7 @@ Download *Node.js* and *npm* in your machine
 you can check the version by 
 `node -v` and `npm -v`
 
---
+---
 
 # How to run this project 
 
