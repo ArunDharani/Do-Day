@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✒️ Do-Day</title>
+
+
+  <link rel="stylesheet" href="/Main.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Bootstrap Datepicker CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"/>
+</head>
+
+<body>
+  <div class="data container">
+
+    <!-- Date Selection Form -->
+    <form action="/date" method="get">
+      <div class="input-group date" id="datepicker">
+        <input id="txtDate" name="selectedDate" type="text" class="form-control" value="<%= listTitle %>" readonly required />
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Submit</button>
+    </form>
+
+    <!-- Work Items -->
+    <% works.forEach((work) => { %>
+      <div class="item">
+        <!-- Remove Work -->
+        <form action="/remove" method="post" style="display:inline;">
+          <input type="hidden" name="date" value="<%= listTitle %>">
+          <input type="checkbox" onchange="this.form.submit()" name="removed" value="<%= work.id %>">
+        </form>
+
+        <!-- Task Title -->
+        <h3 class="name" style="display:inline-block; margin-left: 10px;"><%= work.title %></h3>
+
+        <!-- Edit Work (non-functional as of now) -->
+        <form class="edit" action="/edit" method="post">
+          <input type="hidden" name="updatedItemId" value="<%= work.id %>">
+          <input id="input<%= work.id %>" type="text" name="updatedItemTitle" value="<%= work.title %>" autocomplete="off" autofocus hidden />
+          <button id="done<%= work.id %>" class="edit" type="submit" hidden>
+            <img class="icon" src="/aesthetics/icons/pencil.svg" alt="tick image">
+          </button>
+        </form>
+      </div>
+    <% }) %>
+
+    <!-- Add New Work -->
+    <form class="item" action="/add" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off" autofocus required />
+      <button class="add btn btn-success" type="submit" name="list" value="<%= listTitle %>">+</button>
+    </form>
+
+  </div>
+
+  <!-- JavaScript Section -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+
+  <script>
+    $(function () {
+      $('#datepicker').datepicker({
+        format: "yyyy-mm-dd", // Ensure format matches backend date format
+        autoclose: true,
+        todayHighlight: true
+      });
+
+      // Set today's date only if input is empty
+      if (!$('#txtDate').val()) {
+        $('#datepicker').datepicker('setDate', new Date());
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer style="margin-top: 40px; text-align: center;">
+    Copyright © <%= new Date().getFullYear() %>
+  </footer>
+</body>
+</html>

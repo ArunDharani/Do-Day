@@ -1,0 +1,118 @@
+/* General Reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: for a parallax feel */
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f8fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-image: url("/images/back.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Container */
+.data.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Header */
+h1, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Date Picker */
+.input-group.date {
+  margin-bottom: 20px;
+}
+
+#txtDate {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.btn-success {
+  font-size: 20px;
+  padding: 0 15px;
+  border-radius: 50%;
+}
+
+/* Items List */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.name {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+/* Input for New Item */
+.item input[type="text"] {
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+/* Icons */
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Error Page Styling */
+.error-box h1 {
+  color: #721c24;
+}
+
+.error-box a {
+  color: #004085;
+  font-weight: bold;
+}
