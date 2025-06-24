@@ -8,25 +8,25 @@ I have included the Preview of this website
 
 ---
 
-## Prerequisites
+# Prerequisites
 Download *Node.js* and *npm* in your machine
 you can check the version by 
 `node -v` and `npm -v`
 
 --
 
-## How to run this project 
+# How to run this project 
 
-# Step - 1. Clone this Repository
+## Step - 1. Clone this Repository
 `https://github.com/ArunDharani/Do-Day.git`
 
-# Step - 2. Please Install npm packages by running
+## Step - 2. Please Install npm packages by running
 Run `npm install` to install all the necessary packages
 
-# Step - 3. Create a .env file inside the Do-Day Folder
+## Step - 3. Create a .env file inside the Do-Day Folder
 `touch .env`
 
-# Step - 4. Add the following inside the env file
+## Step - 4. Add the following inside the env file
 ```
 PORT= "your wish"
 DB_HOST= "you can also change this"
@@ -38,7 +38,7 @@ DB_NAME= "yourdbname"
 ```
 For the above you can provide your own credentials
 
-# Step - 5. Create table in your database in the form 
+## Step - 5. Create table in your database in the form 
 ```
 CREATE TABLE dolist (
   id SERIAL PRIMARY KEY,
@@ -47,8 +47,8 @@ CREATE TABLE dolist (
 );
 ```
 
-# Step - 6. Finally Run the command 
-`node Main.js`
+## Step - 6. Finally Run the command 
+```node Main.js```
 
 To get website to run
 
