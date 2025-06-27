@@ -58,6 +58,12 @@ To get website to run
 
 ---
 
+## Step - 7. Now run the below command (only if you give DB_HOST as localhost)
+`localhost:PORT`
+For the PORT you give the value you gave in .env file
+
+---
+
 ![Demo video](./Demo.mp4)
 
 ---
