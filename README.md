@@ -71,4 +71,4 @@ For the PORT you give the value you gave in .env file
 Fell Free to provide or make any changes 
 If you like to contribute 
 Fork this repo 
-and you know the necessary drills to do 
+and perform the necessary drills to make changes 
